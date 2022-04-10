@@ -1,28 +1,25 @@
 package BentgrassSystem;
 
-import javax.xml.transform.Result;
 import java.util.*;
 
 public class Golfer {
     private String userName;
     private int rank;
     private int tournamentsPlayed;
-    private Bentgrass league;
     private double handicap;
     List<Results>CurrentSeasonScores;
     List<Double> handicapDifferentials = new ArrayList<>();
-    List<Integer> season4Scores = new ArrayList<>();
+    List<Integer> playerSeason4Scores = new ArrayList<>();
     List<Results> tournamentResults = new ArrayList<>();
 
 
 
-    public Golfer(String userName, Bentgrass League) {
+    public Golfer(String userName) {
         this.userName = userName;
-        this.league = new Bentgrass();
     }
 
     public double powerAlgo() {
-        double avgScore = scoringAverage(season4Scores);
+        double avgScore = scoringAverage(playerSeason4Scores);
         double handicap = calculatePlayerHandicap();
         int powerVariable = 3;
 
@@ -34,12 +31,12 @@ public class Golfer {
     public double scoringAverage(List<Integer> seasonScores) {
         double avg = 0.0;
         int sum = 0;
-        if (season4Scores.size() == 0)
+        if (playerSeason4Scores.size() == 0)
             return 0.0;
-        for (Integer score : season4Scores) {
+        for (Integer score : playerSeason4Scores) {
             sum += score;
         }
-        avg = (double) sum / season4Scores.size();
+        avg = (double) sum / playerSeason4Scores.size();
 
         return avg;
     }
@@ -105,7 +102,7 @@ public class Golfer {
     public String toString(){
 
         return "Player Stats: " + this.userName + " | Power Number: " + String.format("%.2f", powerAlgo()) + " | Scoring average: " +
-                String.format("%.2f", scoringAverage(season4Scores)) + " | handicap: " + String.format("%.1f", calculatePlayerHandicap());
+                String.format("%.2f", scoringAverage(playerSeason4Scores)) + " | handicap: " + String.format("%.1f", calculatePlayerHandicap());
     }
 
 
@@ -149,13 +146,9 @@ public class Golfer {
         this.tournamentsPlayed = tournamentsPlayed;
     }
 
-    public Bentgrass getLeague() {
-        return league;
-    }
 
-
-    public List<Integer> getSeason4Scores() {
-        return season4Scores;
+    public List<Integer> getPlayerSeason4Scores() {
+        return playerSeason4Scores;
     }
 
 
@@ -167,8 +160,6 @@ public class Golfer {
         this.tournamentResults = tournamentResults;
     }
 
-    public void setLeague(Bentgrass league) {
-        this.league = league;
-    }
+
 
 }

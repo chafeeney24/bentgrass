@@ -7,8 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bentgrassHandicap" />
+        <module name="BentgrassLeague" />
         <module name="New folder" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BentgrassLeague" options="--add-modules java.desktop,java.base" />
+    </option>
   </component>
 </project>

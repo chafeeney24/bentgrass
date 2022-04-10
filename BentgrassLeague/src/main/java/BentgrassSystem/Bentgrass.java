@@ -1,74 +1,66 @@
 package BentgrassSystem;
 
-import java.awt.geom.GeneralPath;
+import BentgrassSystem.UserInOut.UserInput;
+
 import java.util.*;
 
+import static BentgrassSystem.UserInOut.UserOutput.bentgrass;
+
 public class Bentgrass {
-    private List<List<Results>> currentSeasonResults = new ArrayList<>();
+    private List<List<Results>> season4Results = new ArrayList<>();
     private List<GolfCourse> playedCourse = new ArrayList<>();
-    private String name;
-    List<Golfer> powerRankings;
-    List<Golfer> memberList = new ArrayList<>();
-    List<List<Results>> season4Results = new ArrayList<>();
+    private List<Golfer> memberList = new ArrayList<>();
 
 
-    public static void main(String[] args) {
-        Bentgrass app = new Bentgrass();
-        app.run();
+    public static void main(String[] args)
+    {
+//        Bentgrass app = new Bentgrass();
+
+        bentgrass.run();
+        UserInput.MainPage(bentgrass);
 
     }
-
     public void run() {
+
         addGolfers();
         addGolfCourse();
         addResults();
 
 
-        openingPage();
-
-        //Main Menu print
-        //openingPage();
-        //memberList.get(1).totalWins(season4Results);
-
-        //Adding Results from most recent events
-
-
-        //printAllMembers(memberList);
-
 
     }
 
     public void addGolfers() {
-        Bentgrass bentgrass = new Bentgrass();
+
         //0
-        memberList.add(new Golfer("feens24", bentgrass));
-        memberList.add(new Golfer("augman69", bentgrass));
-        memberList.add(new Golfer("TheReelSaGa", bentgrass));
-        memberList.add(new Golfer("carstoni_92", bentgrass));
-        memberList.add(new Golfer("joekeig", bentgrass));
+        memberList.add(new Golfer("feens24"));
+        memberList.add(new Golfer("augman69"));
+        memberList.add(new Golfer("TheReelSaGa"));
+        memberList.add(new Golfer("carstoni_92"));
+        memberList.add(new Golfer("joekeig"));
         //5 IS NEXT LINE
-        memberList.add(new Golfer("daddy-oh04667", bentgrass));
-        memberList.add(new Golfer("UpDogg107", bentgrass));
-        memberList.add(new Golfer("ajalves", bentgrass));
-        memberList.add(new Golfer("Max-Power-Money", bentgrass));
-        memberList.add(new Golfer("cwillllll08", bentgrass));
+        memberList.add(new Golfer("daddy-oh04667"));
+        memberList.add(new Golfer("UpDogg107"));
+        memberList.add(new Golfer("ajalves"));
+        memberList.add(new Golfer("Max-Power-Money"));
+        memberList.add(new Golfer("cwillllll08"));
         //10 IS NEXT LINE
-        memberList.add(new Golfer("richmagpies1862", bentgrass));
-        memberList.add(new Golfer("Robo_Rameses", bentgrass));
-        memberList.add(new Golfer("VictOHRay", bentgrass));
-        memberList.add(new Golfer("doodys4", bentgrass));
-        memberList.add(new Golfer("WTF_LOL_OMG_STFU", bentgrass));
+        memberList.add(new Golfer("richmagpies1862"));
+        memberList.add(new Golfer("Robo_Rameses"));
+        memberList.add(new Golfer("VictOHRay"));
+        memberList.add(new Golfer("doodys4"));
+        memberList.add(new Golfer("WTF_LOL_OMG_STFU"));
         //15 IS NEXT LINE
-        memberList.add(new Golfer("FatChaz15", bentgrass));
-        memberList.add(new Golfer("diverhawks1", bentgrass));
-        memberList.add(new Golfer("Josh_Allen17", bentgrass));
-        memberList.add(new Golfer("MattNormus", bentgrass));
-        memberList.add(new Golfer("Rontgen", bentgrass));
+        memberList.add(new Golfer("FatChaz15"));
+        memberList.add(new Golfer("diverhawks1"));
+        memberList.add(new Golfer("Josh_Allen17"));
+        memberList.add(new Golfer("MattNormus"));
+        memberList.add(new Golfer("Rontgen"));
         //20 IS NEXT LINE
-        memberList.add(new Golfer("EXTRA-ABSORBENT", bentgrass));
-        memberList.add(new Golfer("B_ROB93", bentgrass));
-        memberList.add(new Golfer("Duffman7171", bentgrass));
-        memberList.add(new Golfer("buDliGhtBalliN", bentgrass));
+        memberList.add(new Golfer("EXTRA-ABSORBENT"));
+        memberList.add(new Golfer("B_ROB93"));
+        memberList.add(new Golfer("Duffman7171"));
+        memberList.add(new Golfer("buDliGhtBalliN"));
 
 
     }
@@ -316,98 +308,10 @@ public class Bentgrass {
         for (Results result : event) {
             result.getGolfer().tournamentResults.add(result);
             for (int score : result.getRoundScores()) {
-                result.getGolfer().season4Scores.add(score);
+                result.getGolfer().playerSeason4Scores.add(score);
                 result.getGolfer().handicapDifferentials.add(score - (result.getCoursePlayed().getCourseRating()));
             }
         }
-    }
-
-    public void openingPage() {
-        System.out.println("......................................................................................");
-        System.out.println("......................................................................................");
-        System.out.println("......................................................................................");
-        System.out.println("...........................BentGrass League Home Page.................................");
-        System.out.println("......................................................................................");
-        System.out.println("......................................................................................");
-        System.out.println("......................................................................................");
-        System.out.println();
-        System.out.println("Please choose an option:  Player Stats | Power Rankings | Member List");
-        Scanner input = new Scanner(System.in);
-        String choice = input.nextLine();
-
-        if (choice.equalsIgnoreCase("Player Stats")) {
-            System.out.println();
-            lookForPlayer(input);
-            System.out.println("Would you like to see any other players? Y/N");
-            String yOrN = input.nextLine();
-            while (yOrN.equalsIgnoreCase("Y")) {
-                lookForPlayer(input);
-                System.out.println("Would you like to see any other players? Y/N");
-                yOrN = input.nextLine();
-            }
-            backToHomepage(input);
-
-        } else if (choice.equalsIgnoreCase("Member List")) {
-            for (Golfer golfer : memberList) {
-                System.out.println(printInfo(golfer, season4Results));
-                System.out.println(".......................................................................");
-            }
-            backToHomepage(input);
-        } else if (choice.equalsIgnoreCase("Power Rankings")) {
-            powerRank(memberList);
-            for (Golfer golfer : powerRankings) {
-                System.out.println((powerRankings.indexOf(golfer) + 1) + ".) " + golfer.getUserName() + " " + golfer.powerAlgo());
-            }
-        }
-
-    }
-
-    public void lookForPlayer(Scanner input) {
-        System.out.println("Player name:");
-        String userName = input.nextLine();
-        for (Golfer golfer : memberList) {
-            if (userName.equalsIgnoreCase("all")) {
-                System.out.println(printInfo(golfer, season4Results));
-                System.out.println(golfer.toString());
-                System.out.println("------------------------------------------------------------------------");
-            } else if (golfer.getUserName().contains(userName)) {
-                System.out.println(printInfo(golfer, season4Results));
-                System.out.println(golfer.toString());
-                System.out.println("--------------------------------------------------------------------------------");
-                //break;
-            }
-        }
-
-    }
-
-    public void backToHomepage(Scanner input) {
-        System.out.println("Would you like to go back to the Homepage? Y/N");
-        String choice = input.nextLine();
-        if (choice.equalsIgnoreCase("Y")) {
-            openingPage();
-        } else if (choice.equalsIgnoreCase("N")) {
-            System.out.println(".....................................................................................");
-            System.out.println(".....................................................................................");
-            System.out.println(".........................Thank you for coming!.......................................");
-            System.out.println(".....................................................................................");
-        }
-    }
-
-    public void printCurrentStats() {
-        for (Golfer golfer : memberList) {
-            System.out.println(golfer.toString());
-            System.out.println();
-        }
-    }
-
-    public void printAllMembers(List<Golfer> memberList, List<List<Results>> currentSeasonResults) {
-
-        for (Golfer golfer : memberList) {
-            System.out.println(printInfo(golfer, currentSeasonResults));
-            System.out.println();
-        }
-
-
     }
 
     public String printInfo(Golfer golfer, List<List<Results>> currentSeasonResults) {
@@ -418,51 +322,26 @@ public class Bentgrass {
         return memberList;
     }
 
-
     public List<GolfCourse> getPlayedCourse() {
         return playedCourse;
     }
 
-    public List<Golfer> getPowerRankings() {
-        return powerRankings;
+    public void setSeason4Results(List<List<Results>> season4Results) {
+        this.season4Results = season4Results;
     }
 
-    public List<List<Results>> getCurrentSeasonResults() {
-        return currentSeasonResults;
+    public void setPlayedCourse(List<GolfCourse> playedCourse) {
+        this.playedCourse = playedCourse;
     }
 
-    public String getName() {
-        return name;
+    public void setMemberList(List<Golfer> memberList) {
+        this.memberList = memberList;
     }
 
-
-    public List<Golfer> powerRank(List<Golfer> memberList) {
-        powerRankings = memberList;
-
-
-        for (int i = 0; i < powerRankings.size(); i++) {
-            {
-                for (int j = powerRankings.size() - 1; j > i; j--) {
-                    if (powerRankings.get(i).powerAlgo() > powerRankings.get(j).powerAlgo()) {
-
-                        Golfer tmp = powerRankings.get(i);
-                        powerRankings.set(i, memberList.get(j));
-                        powerRankings.set(j, tmp);
-                    }
-
-                }
-            }
-        }
-        for (int k = 0; k < memberList.size(); k++) {
-                    if (memberList.get(k).getTournamentsPlayed() < 3) {
-                        powerRankings.remove(memberList.get(k));
-                    }
-                }
-
-        return powerRankings;
+    public List<List<Results>> getSeason4Results() {
+        return season4Results;
     }
 }
-
 
 
 //    public void fullLeaguePrint(List<Golfer> memberList){
