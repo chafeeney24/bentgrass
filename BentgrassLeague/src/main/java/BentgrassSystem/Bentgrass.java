@@ -7,7 +7,7 @@ import java.util.*;
 import static BentgrassSystem.UserInOut.UserOutput.bentgrass;
 
 public class Bentgrass {
-    private List<List<Results>> season4Results = new ArrayList<>();
+    private List<List<Results>> season5Results = new ArrayList<>();
     private List<GolfCourse> playedCourse = new ArrayList<>();
     private List<Golfer> memberList = new ArrayList<>();
 
@@ -33,34 +33,58 @@ public class Bentgrass {
     public void addGolfers() {
 
         //0
-        memberList.add(new Golfer("feens24"));
-        memberList.add(new Golfer("augman69"));
-        memberList.add(new Golfer("TheReelSaGa"));
-        memberList.add(new Golfer("carstoni_92"));
-        memberList.add(new Golfer("joekeig"));
+        Golfer feens24 = new Golfer("feens24");
+        memberList.add(feens24);
+        Golfer augman69 = new Golfer("augman69");
+        memberList.add(augman69);
+        Golfer theReelSaGa = new Golfer("TheReelSaGa");
+        memberList.add(theReelSaGa);
+        Golfer carstoni92 = new Golfer("carstoni_92");
+        memberList.add(carstoni92);
+        Golfer joekeig = new Golfer("joekeig");
+        memberList.add(joekeig);
         //5 IS NEXT LINE
-        memberList.add(new Golfer("daddy-oh04667"));
-        memberList.add(new Golfer("UpDogg107"));
-        memberList.add(new Golfer("ajalves"));
-        memberList.add(new Golfer("Max-Power-Money"));
-        memberList.add(new Golfer("cwillllll08"));
+        Golfer daddyOh = new Golfer("daddy-oh04667");
+        memberList.add(daddyOh);
+        Golfer upDogg = new Golfer("UpDogg107");
+        memberList.add(upDogg);
+        Golfer ajalves = new Golfer("ajalves");
+        memberList.add(ajalves);
+        Golfer maxPowerMoney = new Golfer("Max-Power-Money");
+        memberList.add(maxPowerMoney);
+        Golfer cwill = new Golfer("cwillllll08");
+        memberList.add(cwill);
         //10 IS NEXT LINE
-        memberList.add(new Golfer("richmagpies1862"));
-        memberList.add(new Golfer("Robo_Rameses"));
-        memberList.add(new Golfer("VictOHRay"));
-        memberList.add(new Golfer("doodys4"));
-        memberList.add(new Golfer("WTF_LOL_OMG_STFU"));
+        Golfer richmagpies = new Golfer("richmagpies1862");
+        memberList.add(richmagpies);
+        Golfer roboRameses = new Golfer("Robo_Rameses");
+        memberList.add(roboRameses);
+        Golfer victOhRay = new Golfer("VictOHRay");
+        memberList.add(victOhRay);
+        Golfer doodys4 = new Golfer("doodys4");
+        memberList.add(doodys4);
+        Golfer wtfLolOmgStfu = new Golfer("WTF_LOL_OMG_STFU");
+        memberList.add(wtfLolOmgStfu);
         //15 IS NEXT LINE
-        memberList.add(new Golfer("FatChaz15"));
-        memberList.add(new Golfer("diverhawks1"));
-        memberList.add(new Golfer("Josh_Allen17"));
-        memberList.add(new Golfer("MattNormus"));
-        memberList.add(new Golfer("Rontgen"));
+        Golfer fatChaz15 = new Golfer("FatChaz15");
+        memberList.add(fatChaz15);
+        Golfer diverhawks1 = new Golfer("diverhawks1");
+        memberList.add(diverhawks1);
+        Golfer joshAllen17 = new Golfer("Josh_Allen17");
+        memberList.add(joshAllen17);
+        Golfer mattNormus = new Golfer("MattNormus");
+        memberList.add(mattNormus);
+        Golfer rontgen = new Golfer("Rontgen");
+        memberList.add(rontgen);
         //20 IS NEXT LINE
-        memberList.add(new Golfer("EXTRA-ABSORBENT"));
-        memberList.add(new Golfer("B_ROB93"));
-        memberList.add(new Golfer("Duffman7171"));
-        memberList.add(new Golfer("buDliGhtBalliN"));
+        Golfer extraAbsorbent = new Golfer("EXTRA-ABSORBENT");
+        memberList.add(extraAbsorbent);
+        Golfer bRob93 = new Golfer("B_ROB93");
+        memberList.add(bRob93);
+        Golfer duffman7171 = new Golfer("Duffman7171");
+        memberList.add(duffman7171);
+        Golfer budLightBallin = new Golfer("buDliGhtBalliN");
+        memberList.add(budLightBallin);
 
 
     }
@@ -80,9 +104,29 @@ public class Bentgrass {
         playedCourse.add(new GolfCourse("Remanent 1824", 72, 7451, 76.8));
         //10
         playedCourse.add(new GolfCourse("The Ramparts at Harp Head", 72, 7255, 75.9));
+        playedCourse.add(new GolfCourse("Redtail River", 72, 7532, 73.2));
     }
 
     public void addResults() {
+
+        {
+            List<Results> week10event1 = new ArrayList<>();
+            String wk10ev1 = "Week 10 - Event 1 (Regular)";
+            GolfCourse redtailRiver = playedCourse.get(11);
+
+            week10event1.add(new Results(augman69, wk10ev1, redtailRiver, new Integer[]{62, 62, 57}));
+            week10event1.add(new Results(, wk10ev1, redtailRiver, new Integer[]{63, 66, 66}));
+            week10event1.add(new Results(, wk10ev1, redtailRiver, new Integer[]{67, 64, 64}));
+            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{67, 65, 65}));
+            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{65, 65, 67}));
+            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{69, 62, 69}));
+            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{68, 66, 67}));
+            week10event1.add(new Results(memberList.get(13), wk10ev1, redtailRiver, new Integer[]{72, 66, 66}));
+            week10event1.add(new Results(memberList.get(12), wk10ev1, redtailRiver, new Integer[]{68, 66, 71}));
+            week10event1.add(new Results(memberList.get(7), wk10ev1, redtailRiver, new Integer[]{69, 63, 75}));
+            week10event1.add(new Results(memberList.get(5), wk10ev1, redtailRiver, new Integer[]{67, 72, 72}));
+            week10event1.add(new Results(memberList.get(2), wk10ev1, redtailRiver, new Integer[]{70, 67, 75}));
+        }
 
         {
             List<Results> week10event2 = new ArrayList<>();
@@ -104,7 +148,7 @@ public class Bentgrass {
             week10event2.add(new Results(memberList.get(5), wk10ev2, rampartsAtHarpHead, new Integer[]{67, 63, 69}));
             week10event2.add(new Results(memberList.get(23), wk10ev2, rampartsAtHarpHead, new Integer[]{69, 65, 69}));
 
-            season4Results.add(week10event2);
+            season5Results.add(week10event2);
             addResultsToPlayer(week10event2);
         }
 
@@ -121,7 +165,7 @@ public class Bentgrass {
             week11event1.add(new Results(memberList.get(5), wk11ev1, remanent1824, new Integer[]{75, 75, 67}));
 
             addResultsToPlayer(week11event1);
-            season4Results.add(week11event1);
+            season5Results.add(week11event1);
         }
 
         {
@@ -143,7 +187,7 @@ public class Bentgrass {
             week11event2.add(new Results(memberList.get(4), wk11ev2, risingFawnCC, new Integer[]{70, 70, 77}));
 
             addResultsToPlayer(week11event2);
-            season4Results.add(week11event2);
+            season5Results.add(week11event2);
         }
 
         {
@@ -162,7 +206,7 @@ public class Bentgrass {
             week12event1.add(new Results(memberList.get(4), wk12ev1, oasisBeachGolfClub, new Integer[]{73, 66, 73}));
 
             addResultsToPlayer(week12event1);
-            season4Results.add(week12event1);
+            season5Results.add(week12event1);
         }
 
         {
@@ -182,7 +226,7 @@ public class Bentgrass {
             week12event2.add(new Results(memberList.get(21), wk12ev2, oldFaroeDunes, new Integer[]{64, 67, 68, 69}));
 
             addResultsToPlayer(week12event2);
-            season4Results.add(week12event2);
+            season5Results.add(week12event2);
         }
 
         {
@@ -203,7 +247,7 @@ public class Bentgrass {
             week13event1.add(new Results(memberList.get(22), wk13ev1, dakotaDowns, new Integer[]{66, 68, 68}));
 
             addResultsToPlayer(week13event1);
-            season4Results.add(week13event1);
+            season5Results.add(week13event1);
         }
 
         {
@@ -225,7 +269,7 @@ public class Bentgrass {
             week13event2.add(new Results(memberList.get(4), wk13ev2, whiskeyRun, new Integer[]{67, 67, 71}));
 
             addResultsToPlayer(week13event2);
-            season4Results.add(week13event2);
+            season5Results.add(week13event2);
         }
 
         {
@@ -240,7 +284,7 @@ public class Bentgrass {
             week14event1.add(new Results(memberList.get(2), wk14ev1, vintageRanch, new Integer[]{69, 70, 69}));
 
             addResultsToPlayer(week14event1);
-            season4Results.add(week14event1);
+            season5Results.add(week14event1);
         }
 
         {
@@ -259,7 +303,7 @@ public class Bentgrass {
             week14event2.add(new Results(memberList.get(4), wk14ev2, buttersBay, new Integer[]{65, 73, 70}));
 
             addResultsToPlayer(week14event2);
-            season4Results.add(week14event2);
+            season5Results.add(week14event2);
 
         }
 
@@ -281,7 +325,7 @@ public class Bentgrass {
             week15event1.add(new Results(memberList.get(2), wk15ev1, skyPeaksResort, new Integer[]{66, 65, 70}));
 
             addResultsToPlayer(week15event1);
-            season4Results.add(week15event1);
+            season5Results.add(week15event1);
         }
 
         {
@@ -299,7 +343,7 @@ public class Bentgrass {
             week15event2.add(new Results(memberList.get(2), wk15ev2, safeHavenShores, new Integer[]{67, 67, 72, 72}));
 
             addResultsToPlayer(week15event2);
-            season4Results.add(week15event2);
+            season5Results.add(week15event2);
 
         }
     }
@@ -326,8 +370,8 @@ public class Bentgrass {
         return playedCourse;
     }
 
-    public void setSeason4Results(List<List<Results>> season4Results) {
-        this.season4Results = season4Results;
+    public void setSeason5Results(List<List<Results>> season5Results) {
+        this.season5Results = season5Results;
     }
 
     public void setPlayedCourse(List<GolfCourse> playedCourse) {
@@ -338,8 +382,8 @@ public class Bentgrass {
         this.memberList = memberList;
     }
 
-    public List<List<Results>> getSeason4Results() {
-        return season4Results;
+    public List<List<Results>> getSeason5Results() {
+        return season5Results;
     }
 }
 

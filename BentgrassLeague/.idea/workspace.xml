@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3596af-c7f1-4f4b-9b39-8ab5a6575051" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/UserInOut/UserInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/UserInOut/UserOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Bentgrass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Bentgrass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Golfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Golfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Leaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/Leaderboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BentgrassSystem/Bentgrass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BentgrassSystem/Bentgrass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BentgrassSystem/Golfer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BentgrassSystem/Golfer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BentgrassSystem/UserInOut/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BentgrassSystem/UserInOut/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +102,7 @@
       <workItem from="1649294327925" duration="1002000" />
       <workItem from="1649307036460" duration="21000" />
       <workItem from="1649389010014" duration="8589000" />
-      <workItem from="1649473363281" duration="8168000" />
+      <workItem from="1649473363281" duration="11002000" />
     </task>
     <servers />
   </component>

@@ -41,7 +41,7 @@ public class UserInput {
 
             case "2":
                 for (int i  = 0; i < bentgrass.getMemberList().size(); i++) {
-                    System.out.println(bentgrass.printInfo(bentgrass.getMemberList().get(i), bentgrass.getSeason4Results()));
+                    System.out.println(bentgrass.printInfo(bentgrass.getMemberList().get(i), bentgrass.getSeason5Results()));
                     System.out.println(".......................................................................");
                 }
                 backToHomepage(bentgrass);
@@ -65,11 +65,11 @@ public class UserInput {
         String userName = scanner.nextLine();
         for (Golfer golfer : bentgrass.getMemberList()) {
             if (userName.equalsIgnoreCase("all")) {
-                System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason4Results()));
+                System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason5Results()));
                 System.out.println(golfer.toString());
                 System.out.println("------------------------------------------------------------------------");
             } else if (golfer.getUserName().contains(userName)) {
-                System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason4Results()));
+                System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason5Results()));
                 System.out.println(golfer.toString());
                 System.out.println("--------------------------------------------------------------------------------");
 
