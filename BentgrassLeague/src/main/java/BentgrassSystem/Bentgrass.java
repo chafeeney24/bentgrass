@@ -22,16 +22,24 @@ public class Bentgrass {
     }
     public void run() {
 
-        addGolfers();
-        addGolfCourse();
+//        addGolfers();
+//        addGolfCourse();
         addResults();
 
 
 
     }
 
-    public void addGolfers() {
+//    public void addGolfers() {
+//
+//    }
 
+//    public void addGolfCourse() {
+//        //0
+//
+//    }
+
+    public void addResults() {
         //0
         Golfer feens24 = new Golfer("feens24");
         memberList.add(feens24);
@@ -86,11 +94,6 @@ public class Bentgrass {
         Golfer budLightBallin = new Golfer("buDliGhtBalliN");
         memberList.add(budLightBallin);
 
-
-    }
-
-    public void addGolfCourse() {
-        //0
         playedCourse.add(new GolfCourse("Safe Haven Shores TGCT", 71, 7154, 74.3));
         playedCourse.add(new GolfCourse("Sky Peaks Resort, Canada", 71, 6897, 79.4));
         playedCourse.add(new GolfCourse("Butter's Bay", 72, 7358, 73.4));
@@ -105,27 +108,31 @@ public class Bentgrass {
         //10
         playedCourse.add(new GolfCourse("The Ramparts at Harp Head", 72, 7255, 75.9));
         playedCourse.add(new GolfCourse("Redtail River", 72, 7532, 73.2));
-    }
+        playedCourse.add(new GolfCourse("Yeti Creek CC - Black", 72, 7413, 78.6));
+        {
+            List<Results> week9event2 = new ArrayList<>();
+            String wk9ev2 = "Week 9 - Event 2 (Major)";
+            GolfCourse yetiCreekCC = playedCourse.get(12);
 
-    public void addResults() {
 
+        }
         {
             List<Results> week10event1 = new ArrayList<>();
             String wk10ev1 = "Week 10 - Event 1 (Regular)";
             GolfCourse redtailRiver = playedCourse.get(11);
 
             week10event1.add(new Results(augman69, wk10ev1, redtailRiver, new Integer[]{62, 62, 57}));
-            week10event1.add(new Results(, wk10ev1, redtailRiver, new Integer[]{63, 66, 66}));
-            week10event1.add(new Results(, wk10ev1, redtailRiver, new Integer[]{67, 64, 64}));
-            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{67, 65, 65}));
-            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{65, 65, 67}));
-            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{69, 62, 69}));
-            week10event1.add(new Results(memberList.get(), wk10ev1, redtailRiver, new Integer[]{68, 66, 67}));
-            week10event1.add(new Results(memberList.get(13), wk10ev1, redtailRiver, new Integer[]{72, 66, 66}));
-            week10event1.add(new Results(memberList.get(12), wk10ev1, redtailRiver, new Integer[]{68, 66, 71}));
-            week10event1.add(new Results(memberList.get(7), wk10ev1, redtailRiver, new Integer[]{69, 63, 75}));
-            week10event1.add(new Results(memberList.get(5), wk10ev1, redtailRiver, new Integer[]{67, 72, 72}));
-            week10event1.add(new Results(memberList.get(2), wk10ev1, redtailRiver, new Integer[]{70, 67, 75}));
+            week10event1.add(new Results(wtfLolOmgStfu, wk10ev1, redtailRiver, new Integer[]{63, 66, 66}));
+            week10event1.add(new Results(maxPowerMoney, wk10ev1, redtailRiver, new Integer[]{67, 64, 64}));
+            week10event1.add(new Results(feens24, wk10ev1, redtailRiver, new Integer[]{67, 65, 65}));
+            week10event1.add(new Results(diverhawks1, wk10ev1, redtailRiver, new Integer[]{65, 65, 67}));
+            week10event1.add(new Results(carstoni92, wk10ev1, redtailRiver, new Integer[]{69, 62, 69}));
+            week10event1.add(new Results(upDogg, wk10ev1, redtailRiver, new Integer[]{68, 66, 67}));
+            week10event1.add(new Results(doodys4, wk10ev1, redtailRiver, new Integer[]{72, 66, 66}));
+            week10event1.add(new Results(victOhRay, wk10ev1, redtailRiver, new Integer[]{68, 66, 71}));
+            week10event1.add(new Results(ajalves, wk10ev1, redtailRiver, new Integer[]{69, 63, 75}));
+            week10event1.add(new Results(daddyOh, wk10ev1, redtailRiver, new Integer[]{67, 72, 72}));
+            week10event1.add(new Results(theReelSaGa, wk10ev1, redtailRiver, new Integer[]{70, 67, 75}));
         }
 
         {
