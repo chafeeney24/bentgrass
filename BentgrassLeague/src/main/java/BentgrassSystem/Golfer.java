@@ -2,7 +2,7 @@ package BentgrassSystem;
 
 import java.util.*;
 
-public class Golfer {
+public class Golfer<Results> {
     private String userName;
     private int rank;
     private int tournamentsPlayed;
@@ -110,7 +110,7 @@ public class Golfer {
         int totalWins = 0;
         for(int i = 0; i < currentSeason.size(); i++){
            List<Results> temp = currentSeason.get(i);
-           if(this.equals(temp.get(0).getGolfer())){
+           if(this.equals(temp.get().g())){
                 totalWins++;
             }
         }

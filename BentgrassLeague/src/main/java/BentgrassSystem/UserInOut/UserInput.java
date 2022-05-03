@@ -4,6 +4,7 @@ import BentgrassSystem.Bentgrass;
 import BentgrassSystem.Golfer;
 import BentgrassSystem.Leaderboard;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class UserInput {
@@ -55,6 +56,7 @@ public class UserInput {
 
                 break;
             default:
+                System.out.println("Please enter a valid choice of 1, 2, 3, or 4.");
                 break;
         }
 
@@ -62,7 +64,7 @@ public class UserInput {
 
     public static void lookForPlayer(Bentgrass bentgrass) {
         System.out.println("Player name:");
-        String userName = scanner.nextLine();
+        String userName = scanner.nextLine().toLowerCase();
         for (Golfer golfer : bentgrass.getMemberList()) {
             if (userName.equalsIgnoreCase("all")) {
                 System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason5Results()));
@@ -72,8 +74,8 @@ public class UserInput {
                 System.out.println(bentgrass.printInfo(golfer, bentgrass.getSeason5Results()));
                 System.out.println(golfer.toString());
                 System.out.println("--------------------------------------------------------------------------------");
-
-            }
+            } else
+                System.out.println("No matching player, try something different.");
         }
 
     }
